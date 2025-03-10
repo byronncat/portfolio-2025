@@ -1,1 +1,1 @@
-- View live preview [here]().
+- View live preview [here](https://thinh-ngo-portfolio.netlify.app/).

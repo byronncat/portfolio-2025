@@ -21,9 +21,11 @@ export default function Header() {
           "flex items-center justify-between"
         )}
       >
-        <div className={clsx("size-8", "cursor-pointer")}>
-          <img src="/icon.svg" alt="Dev logo" className="size-full" />
-        </div>
+        <a href="#introduction">
+          <div className={clsx("size-8", "cursor-pointer")}>
+            <img src="/icon.svg" alt="Dev logo" className="size-full" />
+          </div>
+        </a>
         <div
           className={clsx(
             "flex items-center",
