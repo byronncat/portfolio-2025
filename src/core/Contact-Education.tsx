@@ -24,18 +24,21 @@ export default function Contact({
               value="0933276382"
               isCopied={copyText === "0933276382"}
               copyToClipboard={copyToClipboard}
+              variant="copy"
             />
             <VariableText
               name="email"
               value="anhthinhncat@gmail.com"
               isCopied={copyText === "anhthinhncat@gmail.com"}
               copyToClipboard={copyToClipboard}
+              variant="copy"
             />
             <VariableText
               name="address"
               value="Ho Chi Minh City, Vietnam"
               isCopied={copyText === "Ho Chi Minh City, Vietnam"}
               copyToClipboard={copyToClipboard}
+              variant="copy"
             />
           </div>
         </section>
@@ -48,12 +51,14 @@ export default function Contact({
               value="University of Science"
               isCopied={copyText === "University of Science"}
               copyToClipboard={copyToClipboard}
+              variant="copy"
             />
             <VariableText
               name="bachelor"
               value="Software Engineering."
               isCopied={copyText === "Software Engineering."}
               copyToClipboard={copyToClipboard}
+              variant="copy"
             />
           </div>
         </section>

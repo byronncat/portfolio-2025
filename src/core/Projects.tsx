@@ -6,7 +6,7 @@ import momentUp from "../assets/moment-up.png";
 
 const projects = [
   {
-    title: "Bygram - Media sharing platform",
+    title: "Media sharing platform",
     image: bygramImage,
     publicHost: "https://bygram.netlify.app",
     github: "https://github.com/byronncat/bygram",
@@ -14,7 +14,7 @@ const projects = [
       "A modern web application designed to help users share images, videos, and connect with others. Built with a focus on clean code and user-friendly design (for personal learning purpose), this platform offers features like user profiles, post exploration, and search functionality.",
   },
   {
-    title: "Bytask - Task management website",
+    title: "Task management website",
     image: bytaskImage,
     publicHost: "https://bytask-thinhngos-projects-58fb4efc.vercel.app",
     github: "https://github.com/byronncat/bytask",
@@ -22,10 +22,10 @@ const projects = [
       "A web application designed to help students and lifelong learners manage their study schedules effectively. Leveraging AI, it provides personalized feedback and insights to optimize learning efficiency and time management.",
   },
   {
-    title: "MomentUp",
+    title: "Social application",
     image: momentUp,
     description:
-      "Enhancing Bygram with more robust features to strengthen foundational knowledge",
+      "An improved version of the Media sharing platform project, incorporating more robust features to strengthen own core skills with AI coding support.",
   },
 ];
 

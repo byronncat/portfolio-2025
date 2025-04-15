@@ -5,6 +5,7 @@ type VariableTextProps = Readonly<{
   value: string;
   isCopied?: boolean;
   copyToClipboard?: (text: string) => void;
+  variant?: "normal" | "copy";
 }>;
 
 export default function VariableText({
@@ -12,17 +13,18 @@ export default function VariableText({
   value,
   isCopied,
   copyToClipboard,
+  variant = "normal"
 }: VariableTextProps) {
   return (
     <p>
       <span className="text-blue-400">const</span>{" "}
       <span className="text-amber-400">{name}</span>{" "}
       <span className="text-white">=</span>{" "}
-      {isCopied && copyToClipboard ? (
+      {variant === "copy" && copyToClipboard ? (
         <>
           <button
             role="button"
-            className={clsx("text-green-300", "cursor-pointer")}
+            className={clsx("text-green-300", "cursor-pointer", "hover:opacity-80 duration-150 ease-in-out")}
             onClick={() => copyToClipboard(value)}
           >
             "{value}"
