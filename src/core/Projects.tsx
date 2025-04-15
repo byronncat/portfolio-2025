@@ -2,11 +2,11 @@ import clsx from "clsx";
 import { Button, Heading } from "../components";
 import bygramImage from "../assets/bygram.png";
 import bytaskImage from "../assets/bytask.png";
-import aiChat from "../assets/ai-chat.png";
+import momentUp from "../assets/moment-up.png";
 
 const projects = [
   {
-    title: "Bygram",
+    title: "Bygram - Media sharing platform",
     image: bygramImage,
     publicHost: "https://bygram.netlify.app",
     github: "https://github.com/byronncat/bygram",
@@ -14,7 +14,7 @@ const projects = [
       "A modern web application designed to help users share images, videos, and connect with others. Built with a focus on clean code and user-friendly design (for personal learning purpose), this platform offers features like user profiles, post exploration, and search functionality.",
   },
   {
-    title: "Bytask",
+    title: "Bytask - Task management website",
     image: bytaskImage,
     publicHost: "https://bytask-thinhngos-projects-58fb4efc.vercel.app",
     github: "https://github.com/byronncat/bytask",
@@ -22,10 +22,10 @@ const projects = [
       "A web application designed to help students and lifelong learners manage their study schedules effectively. Leveraging AI, it provides personalized feedback and insights to optimize learning efficiency and time management.",
   },
   {
-    title: "AI Chat",
-    image: aiChat,
+    title: "MomentUp",
+    image: momentUp,
     description:
-      "AI chat helps you get answers, find inspiration and be more productive. It is free to use and easy to try with ALL latest LLM models",
+      "Enhancing Bygram with more robust features to strengthen foundational knowledge",
   },
 ];
 

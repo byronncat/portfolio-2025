@@ -19,13 +19,6 @@ import mongodb from "../assets/icons/mongodb.svg";
 import redis from "../assets/icons/redis.svg";
 import supabase from "../assets/icons/supabase.svg";
 import git from "../assets/icons/git.svg";
-import dart from "../assets/icons/dart.svg";
-import python from "../assets/icons/python.svg";
-import java from "../assets/icons/java.svg";
-import cplusplus from "../assets/icons/cplusplus.svg";
-import flutter from "../assets/icons/flutter.svg";
-import flask from "../assets/icons/flask.svg";
-import django from "../assets/icons/django.svg";
 
 export default function Profile({
   className,
@@ -114,13 +107,6 @@ export default function Profile({
                 <span className="w-3 mr-2 text-xs text-green-400">✔</span>
                 <img src={react} alt="reactnative" className="size-6 mr-2" />
                 React Native
-              </div>
-              <div>
-                <div className="flex items-center">
-                  <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                  <img src={nestjs} alt="nestjs" className="size-6 mr-2" />
-                  NestJS
-                </div>
               </div>
             </div>
           </div>
@@ -223,43 +209,15 @@ export default function Profile({
             )}
           >
             <div className="grid grid-cols-2 gap-y-3">
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-yellow-500">⌛</span>
-                <img src={flutter} alt="flutter" className="size-6 mr-2" />
-                Flutter
+              <div>
+                <div className="flex items-center">
+                  <span className="w-3 mr-2 text-xs text-green-400">⌛</span>
+                  <img src={nestjs} alt="nestjs" className="size-6 mr-2" />
+                  NestJS
+                </div>
               </div>
               <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-yellow-500">⌛</span>
-                <img src={dart} alt="dart" className="size-6 mr-2" />
-                Dart
-              </div>
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                <img src={java} alt="java" className="size-6 mr-2" />
-                Java
-              </div>
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                <img src={cplusplus} alt="cplusplus" className="size-6 mr-2" />
-                C++
-              </div>
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                <img src={flask} alt="flask" className="size-6 mr-2" />
-                Flask
-              </div>
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                <img src={python} alt="python" className="size-6 mr-2" />
-                Python
-              </div>
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                <img src={django} alt="django" className="size-6 mr-2" />
-                Django
-              </div>
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
+                <span className="w-3 mr-2 text-xs text-green-400">⌛</span>
                 <img src={supabase} alt="supabase" className="size-6 mr-2" />
                 Supabase
               </div>
