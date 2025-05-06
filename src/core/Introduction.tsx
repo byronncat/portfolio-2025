@@ -47,13 +47,11 @@ export default function Introduction({
           <p className="text-green-400">
             (c) Microsoft Corporation. All rights reserved.
           </p>
-          {/* prettier-ignore */}
           <p className="text-white mt-5">
-            <span className="text-green-400">C:\Users\ADMIN&gt;</span>{" "}
-            I am a final-year student seeking a full-time software developer role.
-            My short-term goal is to master as a builder, crafting impactful code,
-            while my long-term vision is to transition into a Business Analyst or
-            DevOps role.
+            <span className="text-green-400">C:\Users\ADMIN&gt;</span> I am a
+            final-year student seeking a full-time software developer role. My
+            main goal is to become a best craftsman in the field of software
+            development.
           </p>
         </div>
       </div>
