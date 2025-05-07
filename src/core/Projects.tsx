@@ -26,6 +26,7 @@ const projects = [
     image: momentUp,
     description:
       "An improved version of the Media sharing platform project, incorporating more robust features to strengthen own core skills with AI coding support.",
+    demo: "https://moment-up-client.vercel.app",
   },
 ];
 
@@ -57,6 +58,7 @@ export default function Projects({
           title={projects[2].title}
           description={projects[2].description}
           image={projects[2].image}
+          demo={projects[2].demo}
         />
       </div>
     </section>
@@ -69,6 +71,7 @@ type FeaturedProjectProps = Readonly<{
   image: string;
   publicHost?: string;
   github?: string;
+  demo?: string;
   direction?: "normal" | "reverse";
 }>;
 
@@ -78,6 +81,7 @@ const FeaturedProject = ({
   image,
   publicHost,
   github,
+  demo,
   direction = "normal",
 }: FeaturedProjectProps) => {
   const isReverse = direction === "reverse";
@@ -108,10 +112,10 @@ const FeaturedProject = ({
 
         <div className="space-x-4">
           <Button
-            onClick={() => window.open(publicHost, "_blank")}
-            disabled={!publicHost}
+            onClick={() => window.open(publicHost || demo, "_blank")}
+            disabled={!publicHost && !demo}
           >
-            {publicHost ? "view-website()" : "null"}
+            {publicHost ? "view-website()" : demo ? "view-demo()" : "null"}
           </Button>
           <Button
             onClick={() => window.open(github, "_blank")}
