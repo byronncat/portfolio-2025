@@ -1,5 +1,6 @@
-import { Typewriter } from "../components";
 import clsx from "clsx";
+import { Typewriter } from "../components";
+import { socialLinks } from "../constants/social_link";
 import minimoss06 from "../assets/minimoss06.gif";
 
 export default function Introduction({
@@ -36,9 +37,9 @@ export default function Introduction({
 
         <div
           className={clsx(
-            "mt-4 p-4 pb-8",
-            "border border-gray-700",
-            "bg-white/[.05]"
+            "mt-4 p-4 pb-4",
+            "border border-white/20",
+            "bg-[#171717]"
           )}
         >
           <p className="text-green-400">
@@ -48,19 +49,28 @@ export default function Introduction({
             (c) Microsoft Corporation. All rights reserved.
           </p>
           <p className="text-white mt-5">
-            <span className="text-green-400">C:\Users\ADMIN&gt;</span> I am a
-            final-year student seeking a full-time software developer role. My
-            main goal is to become a best craftsman in the field of software
-            development.
+            <span className="text-green-400">C:\Users\ADMIN&gt;</span>{" "}
+            Final-year student available for a full-time Web app Developer role,
+            eager to contribute to building innovative, scalable, and
+            user-friendly web applications.
           </p>
+
+          <div className="flex items-center gap-4 mt-8">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white opacity-50 hover:opacity-100 transition-opacity duration-200"
+                aria-label={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
-        </svg>
-      </div> */}
     </section>
   );
 }

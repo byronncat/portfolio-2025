@@ -11,8 +11,9 @@ export default function Header() {
         "w-full h-16",
         "pl-8 pr-8 lg:pr-12",
         "flex items-center justify-center",
-        "border-b border-gray-700",
-        "select-none"
+        "border-b border-white/20",
+        "select-none",
+        "bg-[#171717]"
       )}
     >
       <div
@@ -29,7 +30,7 @@ export default function Header() {
         <div
           className={clsx(
             "flex items-center",
-            "text-[#888888] text-xl lg:text-lg"
+            "text-gray-400 text-xl lg:text-lg"
           )}
         >
           <button
@@ -64,8 +65,9 @@ export default function Header() {
               !isMenuOpen ? "hidden" : "flex",
               "absolute lg:static top-16 left-0 z-10",
               "pt-4 pb-8 lg:p-0",
-              "w-full lg:w-fit bg-[#021528]",
-              "border-b lg:border-b-0 border-gray-700",
+              "w-full lg:w-fit",
+              "border-b lg:border-b-0 border-white/20",
+              "bg-[#171717] lg:bg-transparent",
               "lg:flex flex-col lg:flex-row",
               "gap-x-16 gap-y-4"
             )}
@@ -74,7 +76,7 @@ export default function Header() {
               className={clsx(
                 "px-8 lg:px-0",
                 "hover:cursor-pointer hover:text-white",
-                "transition-color ease-in-out duration-200"
+                "transition-colors ease-in-out duration-200"
               )}
               href="#introduction"
               onClick={() => setIsMenuOpen(false)}
@@ -85,7 +87,7 @@ export default function Header() {
               className={clsx(
                 "px-8 lg:px-0",
                 "hover:cursor-pointer hover:text-white",
-                "transition-color ease-in-out duration-200"
+                "transition-colors ease-in-out duration-200"
               )}
               href="#contact"
               onClick={() => setIsMenuOpen(false)}
@@ -96,7 +98,7 @@ export default function Header() {
               className={clsx(
                 "px-8 lg:px-0",
                 "hover:cursor-pointer hover:text-white",
-                "transition-color ease-in-out duration-200"
+                "transition-colors ease-in-out duration-200"
               )}
               href="#education"
               onClick={() => setIsMenuOpen(false)}
@@ -107,7 +109,7 @@ export default function Header() {
               className={clsx(
                 "px-8 lg:px-0",
                 "hover:cursor-pointer hover:text-white",
-                "transition-color ease-in-out duration-200"
+                "transition-colors ease-in-out duration-200"
               )}
               href="#about"
               onClick={() => setIsMenuOpen(false)}
@@ -118,7 +120,7 @@ export default function Header() {
               className={clsx(
                 "px-8 lg:px-0",
                 "hover:cursor-pointer hover:text-white",
-                "transition-color ease-in-out duration-200"
+                "transition-colors ease-in-out duration-200"
               )}
               href="#skills"
               onClick={() => setIsMenuOpen(false)}
@@ -129,7 +131,7 @@ export default function Header() {
               className={clsx(
                 "px-8 lg:px-0",
                 "hover:cursor-pointer hover:text-white",
-                "transition-color ease-in-out duration-200"
+                "transition-colors ease-in-out duration-200"
               )}
               href="#projects"
               onClick={() => setIsMenuOpen(false)}

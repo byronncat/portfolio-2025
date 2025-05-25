@@ -3,6 +3,10 @@ import { Button, Heading } from "../components";
 import bygramImage from "../assets/bygram.png";
 import bytaskImage from "../assets/bytask.png";
 import momentUp from "../assets/moment-up.png";
+import aiChatBotImage from "../assets/ai-chat-bot.webp";
+import aiChatBotImage1 from "../assets/ai-chat-bot-1.webp";
+import aiChatBotImage2 from "../assets/ai-chat-bot-2.webp";
+
 
 const projects = [
   {
@@ -20,6 +24,14 @@ const projects = [
     github: "https://github.com/byronncat/bytask",
     description:
       "A web application designed to help students and lifelong learners manage their study schedules effectively. Leveraging AI, it provides personalized feedback and insights to optimize learning efficiency and time management.",
+  },
+  {
+    title: "AI Chat Bot",
+    image: [aiChatBotImage, aiChatBotImage1, aiChatBotImage2],
+    publicHost: "https://play.google.com/store/apps/details?id=com.aichatbot.assistant&hl=en&pli=1",
+    github: "https://github.com/thinhngoo/AI_chat_bot",
+    description:
+      "AI-Powered Chat Platform is designed to provide users with an interactive AI chat experience, customizable AI bot creation, and knowledge dataset management.",
   },
   {
     title: "Social application",
@@ -54,11 +66,21 @@ export default function Projects({
           direction="reverse"
         />
 
+
         <FeaturedProject
           title={projects[2].title}
           description={projects[2].description}
           image={projects[2].image}
-          demo={projects[2].demo}
+          publicHost={projects[2].publicHost}
+          github={projects[2].github}
+        />
+   
+        <FeaturedProject
+          title={projects[3].title}
+          description={projects[3].description}
+          image={projects[3].image}
+          demo={projects[3].demo}
+          direction="reverse"
         />
       </div>
     </section>
@@ -68,7 +90,7 @@ export default function Projects({
 type FeaturedProjectProps = Readonly<{
   title: string;
   description: string;
-  image: string;
+  image: string | string[];
   publicHost?: string;
   github?: string;
   demo?: string;
@@ -115,13 +137,13 @@ const FeaturedProject = ({
             onClick={() => window.open(publicHost || demo, "_blank")}
             disabled={!publicHost && !demo}
           >
-            {publicHost ? "view-website()" : demo ? "view-demo()" : "null"}
+            {publicHost ? "View Project" : demo ? "View Demo" : "null"}
           </Button>
           <Button
             onClick={() => window.open(github, "_blank")}
             disabled={!github}
           >
-            {github ? "view-source()" : "null"}
+            {github ? "View Source" : "null"}
           </Button>
         </div>
       </div>
@@ -130,13 +152,31 @@ const FeaturedProject = ({
         className={clsx(
           "relative",
           "w-full lg:w-auto",
-          "flex justify-center",
+          "h-[234px]",
+          "flex justify-center items-center",
           "mt-6 lg:mt-0",
           "z-10",
           isReverse ? "lg:order-1 lg:justify-start" : "lg:justify-end"
         )}
       >
-        <img src={image} alt={title} />
+        {Array.isArray(image) ? (
+          <div className="flex gap-4 w-full h-full justify-center">
+            {image.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`${title} ${index + 1}`}
+                className="max-w-[33%] h-full object-contain"
+              />
+            ))}
+          </div>
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            className="max-w-full max-h-full w-auto h-auto object-contain"
+          />
+        )}
         {!github && (
           <span
             className={clsx(

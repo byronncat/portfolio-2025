@@ -15,8 +15,8 @@ export default function About({ className }: Readonly<{ className?: string }>) {
       >
         <div
           className={clsx(
-            "size-48 bg-green-700/[.05] shrink-0",
-            "border-2 border-gray-700",
+            "size-48 bg-green-300/[.05] shrink-0",
+            "border-2 border-white/20",
             "mr-8 mb-6 lg:mb-0"
           )}
           style={{
@@ -27,30 +27,18 @@ export default function About({ className }: Readonly<{ className?: string }>) {
         </div>
         <div
           className={clsx(
-            "bg-white/[.05] p-4",
-            "border border-gray-700",
+            "bg-[#171717] p-4",
+            "border border-white/20",
             "place-self-stretch"
           )}
         >
           <VariableText
             name="Goal"
-            value="Looking for long-term growth in the company."
+            value="Become a best craftsman in the field of software development."
           />
           <VariableText
-            name="English"
-            value="Good at speaking, listening, and reading."
-          />
-          <VariableText
-            name="Education"
-            value="University of Sciences (2021 - Expected May 2025)."
-          />
-          <VariableText
-            name="Work Ethic"
-            value="Hardworking, productive, and always eager to learn."
-          />
-          <VariableText
-            name="Objectives"
-            value="Improving both technical skills (algorithms, design patterns) and soft skills (code review, AI integration)."
+            name="Description"
+            value="My journey began with a curiosity about how this world works, which has evolved into a deep interest in creating products. Although I am at the beginning of my professional career, I have gained experience working with various technologies through (e.g. React, Node.js, MySQL, MongoDB, etc.) both personal and group projects."
           />
         </div>
       </div>

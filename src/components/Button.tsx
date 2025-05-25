@@ -11,10 +11,10 @@ export default function Button({ children, onClick, ...rest }: ButtonProps) {
     <button
       className={clsx(
         "px-4 py-2",
-        "bg-[#1e2d3d] text-green-300 rounded-md",
-        "hover:bg-[#2f3e4f] transition-colors duration-200 ease-in-out",
+        "bg-white/[.07] text-green-300 rounded-md",
+        "hover:bg-[#1e2d3d] transition-colors duration-200 ease-in-out",
         "cursor-pointer",
-        "disabled:opacity-50 disabled:cursor-default disabled:hover:bg-[#1e2d3d]"
+        "disabled:opacity-50 disabled:cursor-default disabled:hover:bg-[#171717]"
       )}
       onClick={onClick}
       {...rest}

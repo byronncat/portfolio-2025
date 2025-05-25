@@ -8,8 +8,12 @@ export default function Contact({
 }: Readonly<{ className?: string }>) {
   const [copyText, setCopyText] = useState("");
 
-  function copyToClipboard(text: string) {
-    navigator.clipboard.writeText(text);
+  async function copyToClipboard(text: string) {
+    if (!navigator?.clipboard) {
+      alert("Clipboard is not supported");
+      return;
+    }
+    await navigator.clipboard.writeText(text);
     setCopyText(text);
   }
 
@@ -18,23 +22,23 @@ export default function Contact({
       <div className="w-full md:max-w-[36rem]">
         <section className="pt-6 mb-6" id="contact">
           <Heading>📞 contact</Heading>
-          <div className="p-4 pb-6 border border-gray-700 bg-white/[.05]">
+          <div className="p-4 pb-6 border border-white/20 bg-[#171717]">
             <VariableText
-              name="phone"
-              value="0933276382"
-              isCopied={copyText === "0933276382"}
+              name="Phone"
+              value="+84 933 276 382"
+              isCopied={copyText === "+84 933 276 382"}
               copyToClipboard={copyToClipboard}
               variant="copy"
             />
             <VariableText
-              name="email"
+              name="Mail"
               value="anhthinhncat@gmail.com"
               isCopied={copyText === "anhthinhncat@gmail.com"}
               copyToClipboard={copyToClipboard}
               variant="copy"
             />
             <VariableText
-              name="address"
+              name="Address"
               value="Ho Chi Minh City, Vietnam"
               isCopied={copyText === "Ho Chi Minh City, Vietnam"}
               copyToClipboard={copyToClipboard}
@@ -45,18 +49,18 @@ export default function Contact({
 
         <section className="pt-6" id="education">
           <Heading>🎓 education</Heading>
-          <div className="p-4 pb-6 border border-gray-700 bg-white/[.05]">
+          <div className="p-4 pb-6 border border-white/20 bg-[#171717]">
             <VariableText
-              name="university"
-              value="University of Science"
+              name="University"
+              value="University of Science - VNUHCM"
               isCopied={copyText === "University of Science"}
               copyToClipboard={copyToClipboard}
               variant="copy"
             />
             <VariableText
-              name="bachelor"
-              value="Software Engineering."
-              isCopied={copyText === "Software Engineering."}
+              name="Bachelor"
+              value="Information Technology"
+              isCopied={copyText === "Information Technology"}
               copyToClipboard={copyToClipboard}
               variant="copy"
             />

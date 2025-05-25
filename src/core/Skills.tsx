@@ -13,7 +13,6 @@ import expo from "../assets/icons/expo.svg";
 import nodejs from "../assets/icons/nodedotjs.svg";
 import express from "../assets/icons/express.svg";
 import nestjs from "../assets/icons/nestjs.svg";
-import mysql from "../assets/icons/mysql.svg";
 import postgresql from "../assets/icons/postgresql.svg";
 import mongodb from "../assets/icons/mongodb.svg";
 import redis from "../assets/icons/redis.svg";
@@ -34,10 +33,10 @@ export default function Profile({
         )}
       >
         <div className="flex flex-col">
-          <h3 className="mb-2 text-green-700">// Framework</h3>
+          <h3 className="mb-2 text-[#888888]">// Framework</h3>
           <div
             className={clsx(
-              "bg-white/[.05] border border-gray-700",
+              "bg-[#171717] border border-white/20",
               "p-6",
               "grow"
             )}
@@ -113,10 +112,10 @@ export default function Profile({
         </div>
 
         <div className="flex flex-col">
-          <h3 className="mb-2 text-green-700">// Programming Languages</h3>
+          <h3 className="mb-2 text-[#888888]">// Programming Languages</h3>
           <div
             className={clsx(
-              "bg-white/[.05] border border-gray-700",
+              "bg-[#171717] border border-white/20",
               "p-6",
               "grow"
             )}
@@ -155,20 +154,15 @@ export default function Profile({
         </div>
 
         <div className="flex flex-col">
-          <h3 className="mb-2 text-green-700">// Others</h3>
+          <h3 className="mb-2 text-[#888888]">// Others</h3>
           <div
             className={clsx(
-              "bg-white/[.05] border border-gray-700",
+              "bg-[#171717] border border-white/20",
               "p-6",
               "grow"
             )}
           >
             <div className="grid grid-cols-2 gap-y-3">
-              <div className="flex items-center">
-                <span className="w-3 mr-2 text-xs text-green-400">✔</span>
-                <img src={mysql} alt="mysql" className="size-6 mr-2" />
-                MySQL
-              </div>
               <div className="flex items-center">
                 <span className="w-3 mr-2 text-xs text-green-400">✔</span>
                 <img src={mongodb} alt="mongodb" className="size-6 mr-2" />
@@ -198,12 +192,12 @@ export default function Profile({
         </div>
 
         <div className="flex flex-col">
-          <h3 className="mb-2 text-green-700">
-            // I have learned or am learning
+          <h3 className="mb-2 text-[#888888]">
+            // I am learning
           </h3>
           <div
             className={clsx(
-              "bg-white/[.05] border border-gray-700",
+              "bg-[#171717] border border-white/20",
               "p-6",
               "grow"
             )}
